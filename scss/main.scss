@@ -1,0 +1,28 @@
+@import './resets';
+
+@mixin grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+.root {
+    @include grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sub-root, .sub-root-2 {
+    margin: 0 auto;
+}
